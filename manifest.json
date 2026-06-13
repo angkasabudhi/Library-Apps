@@ -1,0 +1,23 @@
+{
+  "name": "Perpustakaan SMPN 54 Bandung - Sistem Manajemen Perpustakaan",
+  "short_name": "Perpustakaan SMPN 54 Bandung",
+  "description": "Sistem Manajemen Perpustakaan PWA Terintegrasi Google Sheets",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#4f46e5",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2232/2232688.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/192/2232/2232688.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
