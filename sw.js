@@ -3,7 +3,7 @@
  * File: sw.js
  */
 
-const CACHE_NAME = 'pustaka-kita-v1';
+const CACHE_NAME = 'pustaka-kita-v2';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
