@@ -3,9 +3,7 @@
  * File: app.js
  */
 
-// ==================== CONFIGURATION ====================
-// Paste your deployed Google Apps Script Web App URL here
-const API_URL = "YOUR_SECRET_API_URL_HERE";
+
 
 
 // Global Application State
@@ -68,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
   lucide.createIcons();
 
   // Update warning if API_URL is default/missing
-  if (!API_URL || API_URL.trim() === "" || API_URL.includes("YOUR_URL_HERE")) {
+  if (!API_URL || API_URL.trim() === "" || API_URL.includes("YOUR_SECRET_API_URL_HERE") || API_URL.includes("YOUR_URL_HERE")) {
     const warning = document.getElementById("setup-warning");
     if (warning) warning.classList.remove("hidden");
   }
@@ -160,10 +158,10 @@ async function handleLoginSubmit(event) {
   spinner.classList.remove("hidden");
   btnText.classList.add("invisible");
 
-  if (!API_URL || API_URL.trim() === "") {
+  if (!API_URL || API_URL.trim() === "" || API_URL.includes("YOUR_SECRET_API_URL_HERE") || API_URL.includes("YOUR_URL_HERE")) {
     showToast("Error: API URL belum diset!", "error");
     errorBox.classList.remove("hidden");
-    document.getElementById("login-error-msg").innerText = "URL Web App belum di-set di index.html!";
+    document.getElementById("login-error-msg").innerText = "URL Web App belum di-set di config.js!";
     spinner.classList.add("hidden");
     btnText.classList.remove("invisible");
     return;
@@ -237,7 +235,7 @@ async function apiGet(action) {
 
 // Sync all database data
 async function syncAllData() {
-  if (!API_URL || API_URL.trim() === "") return;
+  if (!API_URL || API_URL.trim() === "" || API_URL.includes("YOUR_SECRET_API_URL_HERE") || API_URL.includes("YOUR_URL_HERE")) return;
 
   const syncIcon = document.getElementById("sync-icon");
   if (syncIcon) syncIcon.style.opacity = "0.5";

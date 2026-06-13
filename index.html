@@ -386,7 +386,7 @@
           <div>
             <h4 class="font-bold text-sm">URL Web App Belum Dikonfigurasi!</h4>
             <p class="text-xs mt-1">
-              Aplikasi belum tersambung ke backend. Silakan buka file <code>app.js</code> di editor Anda, lalu ganti
+              Aplikasi belum tersambung ke backend. Silakan buka file <code>config.js</code> di editor Anda, lalu ganti
               nilai variabel <code>API_URL</code> dengan link deployment Google Apps Script Anda.
             </p>
           </div>
@@ -1133,6 +1133,7 @@
   <div id="toast-container" class="fixed bottom-5 right-5 z-[9999] flex flex-col space-y-2 pointer-events-none"></div>
 
   <!-- Link app.js script (defer to ensure DOM binds correctly) -->
+  <script src="config.js" defer></script>
   <script src="app.js" defer></script>
 </body>
 

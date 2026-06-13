@@ -17,13 +17,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
-      - name: Inject Secret API URL
-        env:
-          API_URL: ${{ secrets.GAS_API_URL }}
+      - name: Generate Config File
+        # This literally writes a new config.js file on the server using your secret
         run: |
-          awk -v rep="$API_URL" '{gsub(/YOUR_SECRET_API_URL_HERE/, rep)}1' app.js > temp.js && mv temp.js app.js
+          echo "const API_URL = '${{ secrets.GAS_API_URL }}';" > config.js
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

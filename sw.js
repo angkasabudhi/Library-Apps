@@ -3,10 +3,11 @@
  * File: sw.js
  */
 
-const CACHE_NAME = 'pustaka-kita-v2';
+const CACHE_NAME = 'pustaka-kita-v3';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
+  './config.js',
   './app.js',
   './manifest.json',
   'https://cdn.tailwindcss.com',
